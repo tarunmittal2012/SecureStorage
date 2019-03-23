@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecureStorage", "SecureStorage\SecureStorage.csproj", "{ABD9C831-BA19-43AB-8863-586CC66B89B8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABD9C831-BA19-43AB-8863-586CC66B89B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABD9C831-BA19-43AB-8863-586CC66B89B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABD9C831-BA19-43AB-8863-586CC66B89B8}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{ABD9C831-BA19-43AB-8863-586CC66B89B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABD9C831-BA19-43AB-8863-586CC66B89B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABD9C831-BA19-43AB-8863-586CC66B89B8}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A04221AB-F03A-49B4-954E-93608CFDDDD0}
+	EndGlobalSection
+EndGlobal
