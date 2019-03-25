@@ -35,6 +35,7 @@ namespace SecureStorage
             encryptText = FindViewById<TextView>(Resource.Id.encrypt_text);
             decryptText = FindViewById<TextView>(Resource.Id.decrypt_text);
             encrypt.Click += Encrypt_Click;
+            decrypt.Click+= Decrypt_Click;
             stringToEncrypt = encrypt_edit.Text.ToString();
             _encryptionKeyHelper = new PlatformEncryptionKeyHelper(Application.Context, "AndroidKeyStore");
             _encryptionKeyHelper.CreateKeyPair();
@@ -49,7 +50,7 @@ namespace SecureStorage
             var encryptedData = cipher.DoFinal(Encoding.UTF8.GetBytes(stringToEncrypt));
             encryptText.Text = encryptedData.ToString();
         }
-  private void Decryptbtn_Click(object sender, System.EventArgs e)
+  private void Decrypt_Click(object sender, System.EventArgs e)
         {
             Cipher cipher = Cipher.GetInstance(transformation);
             cipher.Init(CipherMode.DecryptMode, _privateKey);
