@@ -21,8 +21,8 @@ namespace SecureStorage
         TextView encryptText, decryptText;
         PlatformEncryptionKeyHelper _encryptionKeyHelper;
         string stringToEncrypt;
-        PrivateKey _privateKey;
-        PublicKey _publicKey;
+        IKey _privateKey;
+        Ikey _publicKey;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -45,11 +45,19 @@ namespace SecureStorage
         private void Encrypt_Click(object sender, EventArgs e)
         {
             Cipher cipher = Cipher.GetInstance(transformation);
-            //cipher.Init(CipherMode.EncryptMode, _publicKey);
+            cipher.Init(CipherMode.EncryptMode, _publicKey);
             var encryptedData = cipher.DoFinal(Encoding.UTF8.GetBytes(stringToEncrypt));
             encryptText.Text = encryptedData.ToString();
         }
-
+  private void Decryptbtn_Click(object sender, System.EventArgs e)
+        {
+            Cipher cipher = Cipher.GetInstance(transformation);
+            cipher.Init(CipherMode.DecryptMode, _privateKey);
+          byte[] decryptbyte = cipher.DoFinal(encryptedData);
+            var final = Encoding.UTF8.GetString(decryptbyte);
+            String str = new String(decryptbyte);
+            decryptText.Text = str.ToString();
+}
      
     }
 }
